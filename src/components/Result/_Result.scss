@@ -1,0 +1,106 @@
+@import "../../scss/Variables";
+
+.result {
+	display: flex;
+	margin-bottom: 20px;
+	height: 192px;
+	background-color: #FFFFFF;
+	box-shadow: $box-shadow;
+	border-radius: $border-radius;
+	@media (max-width: 770px) {
+		height: 300px;
+		flex-direction: column-reverse;
+	}
+	&:last-child {
+		margin-bottom: 0;
+	}
+	.purchase-block {
+		display: flex;
+		flex-direction: column;
+		padding: 20px;
+		.carrier-logo {
+			width: 200px;
+			height: 65px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			@media (max-width: 770px) {
+				width: 100%;
+			}
+			img {
+				width: 100%;
+				@media (max-width: 770px) {
+					width: auto;
+					height: 100%;
+				}
+			}
+		}
+		button {
+			margin-top: 20px;
+			padding: 10px 0;
+			background-color: #FF6D00;
+			color: #FFFFFF;
+			font-size: 20px;
+			border: none;
+			border-radius: 10px;
+			box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
+		}
+	}
+	.ticket-details {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		width: 400px;
+		padding: 20px;
+		position: relative;
+		border-left: 1px solid #D6D9D9;
+		@media (max-width: 770px) {
+			width: 100%;
+		}
+		h3 {
+			font-size: 36px;
+			margin-bottom: 20px;
+		}
+		h4 {
+			font-weight: 700;
+			margin-bottom: 10px;
+		}
+		h5 {
+			color: #AEB4B7;
+		}
+		.departure {
+			text-align: left;
+		}
+		.arrival {
+			text-align: right;
+		}
+		.arrow {
+			position: absolute;
+			width: 120px;
+			height: 1px;
+			background-color: #D6D9D9;
+			top: 35%;
+			left: 50%;
+			transform: translateX(-50%);
+			color: #D6D9D9;
+			&:after {
+				font-family: 'Font Awesome 5 Free';
+				font-weight: 700;
+				font-size: 12px;
+				content: '\f072';
+				position: absolute;
+				top: 50%;
+				left: 102%;
+				transform: translateY(-50%);
+			}
+			p {
+				position: absolute;
+				font-size: 14px;
+				top: -19px;
+				left: 50%;
+				transform: translateX(-50%);
+				white-space: nowrap;
+			}
+		}
+	}
+}

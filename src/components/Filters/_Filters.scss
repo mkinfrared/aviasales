@@ -1,0 +1,107 @@
+@import "../../scss/Checkbox";
+@import "../../scss/Variables";
+
+.filters-wrap {
+	align-self: flex-start;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	text-transform: uppercase;
+	color: #5A5A5A;
+	background-color: #FFFFFF;
+	border-radius: $border-radius;
+	box-shadow: $box-shadow;
+	margin-bottom: 20px;
+	@media (max-width: 770px) {
+		width: 33%;
+		align-self: center;
+	}
+	p {
+		font-weight: 800;
+		text-align: left;
+		margin-bottom: 20px;
+	}
+	> p, > .currency {
+		margin-left: 20px;
+		margin-right: 20px;
+	}
+	.currency {
+		display: flex;
+		flex-wrap: nowrap;
+		> button {
+			display: block;
+			margin: -1px 0 0 -1px;
+			white-space: nowrap;
+			vertical-align: middle;
+			text-align: center;
+			width: 80px;
+			height: 50px;
+			background-color: #FFFFFF;
+			border: 1px solid #E4E5E6;
+			color: #4BAAF5;
+			font-weight: 700;
+			cursor: pointer;
+			outline: none;
+			&:first-child {
+				border-radius: 10px 0 0 10px;
+				//border-right: none;
+			}
+			&:last-child {
+				border-radius: 0 10px 10px 0;
+				//border-left: none;
+			}
+			&:hover {
+				background-color: #F2FCFF;
+				border-color: #6DBAF6;
+				+ button {
+					border-left-color: #6DBAF6;
+				}
+			}
+		}
+		button.active {
+			color: #FFFFFF;
+			background-color: #2196F3;
+			border-color: #2196F3 !important;
+			& + button {
+				border-left-color: #2196F3;
+			}
+			&:hover {
+				color: #FFFFFF;
+				background-color: #2196F3;
+			}
+		}
+	}
+	.filter {
+		margin-top: 20px;
+		> p {
+			margin: 0 0 20px 20px;
+		}
+		.stops-filter {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			padding-right: 15px;
+			overflow: hidden;
+			&:hover {
+				background-color: #F1FCFF;
+				.checkbox__only {
+					transform: translateY(0);
+					transition: all 0.275s linear;
+				}
+			}
+			label {
+				text-align: left;
+				font-weight: 400;
+				text-transform: capitalize;
+				white-space: nowrap;
+			}
+			.checkbox__only {
+				transform: translateY(-1000%);
+				transition: none;
+				text-transform: uppercase;
+				color: #2196F3;
+				font-size: 16px;
+				cursor: pointer;
+			}
+		}
+	}
+}

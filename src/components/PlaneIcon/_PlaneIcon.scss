@@ -1,0 +1,18 @@
+.plane-icon {
+	display: flex;
+	width: 53px;
+	height: 53px;
+	justify-content: center;
+	align-items: center;
+	padding: 0;
+	background-color: #2095F2;
+	border-radius: 50%;
+	overflow: hidden;
+	box-shadow: 0px 0px 5px #000000;
+	i {
+		font-size: 24px;
+		color: #F3F3F3;
+		text-shadow: 0px 0px 5px #000000;
+		transform: rotate(-45deg);
+	}
+}
